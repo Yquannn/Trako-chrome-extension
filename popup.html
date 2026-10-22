@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trako Order Exporter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <div class="brand"><img class="mark" src="assets/mascot-head.svg" alt="Trako mascot"><div><h1>Trako Order Exporter</h1><p>Local order history export</p></div></div>
+    <div class="page-info"><div><span>Platform</span><strong id="platform">Checking active tab…</strong></div><div><span>Page</span><strong id="pageStatus">Ready to scan</strong></div></div>
+    <p class="hint">Trako appears automatically on supported order history pages. It exports only the orders already loaded on the page. Load more orders on Shopee, then export again to include them.</p>
+    <div id="summary" class="summary" aria-live="polite"><div><span>Orders found</span><b id="found">—</b></div><div><span>Orders extracted</span><b id="extracted">—</b></div><div><span>Orders skipped</span><b id="skipped">—</b></div><div><span>With delivery status</span><b id="withStatus">—</b></div><div><span>With exact delivery date</span><b id="withDate">—</b></div></div>
+    <p id="status" role="status" aria-live="polite">Ready</p>
+    <button id="export">Export orders to CSV</button>
+    <p class="privacy">Order data stays in this browser. Trako does not collect passwords, cookies, or send order data to a server.</p>
+  </main>
+  <script src="export-core.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

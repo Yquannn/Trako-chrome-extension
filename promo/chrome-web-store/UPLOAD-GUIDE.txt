@@ -1,0 +1,11 @@
+Chrome Web Store listing images
+
+Screenshots field: upload 01-export.jpg through 05-spreadsheet.jpg, in that order.
+Each screenshot is 1280 x 800.
+
+Small promo tile field: upload small-promo-440x280.jpg.
+Marquee promo tile field: upload marquee-promo-1400x560.jpg.
+
+All seven assets are JPEG images without transparency, matching the dimensions shown in the supplied developer dashboard screenshot.
+
+The screenshots use actual supplied Trako UI, with explanatory captions. Account profile areas have been cropped out. These are listing images, not evidence that every order field was extracted correctly.

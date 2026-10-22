@@ -1,0 +1,27 @@
+Meet Trako
+All those Shopee orders? Let’s turn them into a spreadsheet! Here’s how to get started with Trako Order Exporter.
+
+1 · Open My Purchases
+First up: install Trako in Chrome, sign in to Shopee, and open My Purchases. Look for the little Trako panel. That’s where you’ll start!
+
+2 · Load your orders
+Want more orders in your export? Scroll down to load them first. Tap Load More if it appears. Remember: Trako scans what’s already loaded on this page.
+
+3 · Start the export
+Ready? Click Export orders to CSV! Trako checks your loaded orders for completed purchases. Orders with other statuses are skipped.
+
+4 · Watch the progress
+Watch the progress right here, along with the estimated time left. You might see temporary order tabs while Trako checks details. Need to stop? Hit Cancel export.
+
+5 · Check the results
+Something got skipped? Check the product name and the reason underneath. An order still marked To Receive won’t be included. Want a fresh scan? Click Scan again. Load more orders first to include more!
+
+6 · Save the CSV
+When your file is ready, choose a folder, give it a name, and click Save. Nice and simple!
+
+7 · Open your spreadsheet
+Now open the CSV in your spreadsheet app. Each product has its own row. Seeing hash marks? Widen the column! Some fields may stay blank if the details aren’t available.
+
+You’re all set
+And you’re done! Load your orders, scan with Trako, and save your CSV. Your order data stays in your browser and isn’t sent to Trako servers. Happy organizing!
+

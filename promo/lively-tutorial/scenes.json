@@ -1,0 +1,137 @@
+[
+  {
+    "step": "Meet Trako",
+    "title": "Your Shopee orders,\nready for a spreadsheet.",
+    "body": "A simple guide to exporting your purchase history.",
+    "narration": "All those Shopee orders? Let\u2019s turn them into a spreadsheet! Here\u2019s how to get started with Trako Order Exporter.",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.20.29.png",
+    "crop": [
+      0.775,
+      0.674,
+      0.217,
+      0.24
+    ],
+    "callout": "Export orders to CSV",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-01.mp3"
+  },
+  {
+    "step": "1 \u00b7 Open My Purchases",
+    "title": "Start with your\npurchase history.",
+    "body": "Install Trako, sign in to Shopee normally, and open My Purchases.",
+    "narration": "First up: install Trako in Chrome, sign in to Shopee, and open My Purchases. Look for the little Trako panel. That\u2019s where you\u2019ll start!",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.20.29.png",
+    "crop": [
+      0.28,
+      0.227,
+      0.71,
+      0.697
+    ],
+    "callout": "Trako appears on the page",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-02.mp3"
+  },
+  {
+    "step": "2 \u00b7 Load your orders",
+    "title": "Load the orders\nyou want included.",
+    "body": "Scroll down. Use Load More if available. Only loaded orders are scanned.",
+    "narration": "Want more orders in your export? Scroll down to load them first. Tap Load More if it appears. Remember: Trako scans what\u2019s already loaded on this page.",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.21.22.png",
+    "crop": [
+      0.28,
+      0.227,
+      0.55,
+      0.65
+    ],
+    "callout": "Load first. Then export.",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-03.mp3"
+  },
+  {
+    "step": "3 \u00b7 Start the export",
+    "title": "One button\nstarts the scan.",
+    "body": "Select Export orders to CSV in the on-page Trako panel.",
+    "narration": "Ready? Click Export orders to CSV! Trako checks your loaded orders for completed purchases. Orders with other statuses are skipped.",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.20.29.png",
+    "crop": [
+      0.775,
+      0.674,
+      0.217,
+      0.24
+    ],
+    "callout": "Click Export orders to CSV",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-04.mp3"
+  },
+  {
+    "step": "4 \u00b7 Watch the progress",
+    "title": "See the progress\nand estimated time.",
+    "body": "Keep this page open. Select Cancel export to stop the scan.",
+    "narration": "Watch the progress right here, along with the estimated time left. You might see temporary order tabs while Trako checks details. Need to stop? Hit Cancel export.",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.21.22.png",
+    "crop": [
+      0.775,
+      0.686,
+      0.217,
+      0.226
+    ],
+    "callout": "Progress \u2022 Time remaining \u2022 Cancel",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-05.mp3"
+  },
+  {
+    "step": "5 \u00b7 Check the results",
+    "title": "Understand what\nwas skipped.",
+    "body": "Read the product name and reason. Select Scan again when you need a fresh scan.",
+    "narration": "Something got skipped? Check the product name and the reason underneath. An order still marked To Receive won\u2019t be included. Want a fresh scan? Click Scan again. Load more orders first to include more!",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.21.06.png",
+    "crop": [
+      0.775,
+      0.482,
+      0.217,
+      0.431
+    ],
+    "callout": "Review the reason. Scan again if needed.",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-06.mp3"
+  },
+  {
+    "step": "6 \u00b7 Save the CSV",
+    "title": "Choose where\nto save your file.",
+    "body": "Confirm the filename, choose a folder, then select Save.",
+    "narration": "When your file is ready, choose a folder, give it a name, and click Save. Nice and simple!",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.21.44.png",
+    "crop": [
+      0.292,
+      0.201,
+      0.376,
+      0.373
+    ],
+    "callout": "Choose a folder \u2192 Save",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-07.mp3"
+  },
+  {
+    "step": "7 \u00b7 Open your spreadsheet",
+    "title": "Your export\nis ready to review.",
+    "body": "Open the CSV in Excel, Google Sheets, or WPS. Widen columns to read long values.",
+    "narration": "Now open the CSV in your spreadsheet app. Each product has its own row. Seeing hash marks? Widen the column! Some fields may stay blank if the details aren\u2019t available.",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.21.50.png",
+    "crop": [
+      0.104,
+      0.225,
+      0.5,
+      0.16
+    ],
+    "callout": "One product per row \u2022 Available details",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-08.mp3"
+  },
+  {
+    "step": "You\u2019re all set",
+    "title": "Load. Scan.\nSave your CSV.",
+    "body": "Your order data is processed in your browser and is not sent to Trako servers.",
+    "narration": "And you\u2019re done! Load your orders, scan with Trako, and save your CSV. Your order data stays in your browser and isn\u2019t sent to Trako servers. Happy organizing!",
+    "screenshot": "/Users/dondonevangelistabautista/Desktop/ScreenRecord/Screenshot 2026-10-22 at 11.20.29.png",
+    "crop": [
+      0.775,
+      0.674,
+      0.217,
+      0.24
+    ],
+    "callout": "Trako Order Exporter",
+    "audio": "/Users/dondonevangelistabautista/Documents/ChatGPT/trako purchase exporter/promo/lively-tutorial/voice-09.mp3"
+  }
+]

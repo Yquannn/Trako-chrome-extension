@@ -1,0 +1,11 @@
+Meet Trako Order Exporter. This guide shows Shopee Philippines.
+
+Install Trako from the Chrome Web Store. Sign in normally and open My Purchases. Trako never asks for your password.
+
+Load the orders you want: scroll and choose Load More when available. Trako reads only orders currently loaded.
+
+Choose Export orders to CSV in Trako's on-page panel. It checks each loaded order and exports completed orders only. Progress and skipped-product reasons stay visible. Cancel, retry, or scan again any time.
+
+When the scan finishes, save the CSV and open it in a spreadsheet. Trako includes order details visible on the page. Some dates or fields may be blank if Shopee does not show them in history.
+
+Your order data stays in your browser and is never sent to Trako servers. Export your own history. Trako Order Exporter.

@@ -1,0 +1,96 @@
+1
+00:00:00,200 --> 00:00:07,976
+All those Shopee orders? Let’s turn them into a spreadsheet! Here’s how to get started with Trako Order Exporter.
+
+2
+00:00:08,533 --> 00:00:14,056
+First up: install Trako in Chrome, sign in to Shopee, and open My Purchases
+
+3
+00:00:14,056 --> 00:00:16,339
+Look for the little Trako panel
+
+4
+00:00:16,339 --> 00:00:18,253
+That’s where you’ll start!
+
+5
+00:00:18,825 --> 00:00:23,618
+Want more orders in your export? Scroll down to load them first
+
+6
+00:00:23,618 --> 00:00:25,672
+Tap Load More if it appears
+
+7
+00:00:25,672 --> 00:00:30,009
+Remember: Trako scans what’s already loaded on this page.
+
+8
+00:00:30,575 --> 00:00:37,708
+Ready? Click Export orders to CSV! Trako checks your loaded orders for completed purchases
+
+9
+00:00:37,708 --> 00:00:40,799
+Orders with other statuses are skipped.
+
+10
+00:00:41,367 --> 00:00:46,234
+Watch the progress right here, along with the estimated time left
+
+11
+00:00:46,234 --> 00:00:50,802
+You might see temporary order tabs while Trako checks details
+
+12
+00:00:50,802 --> 00:00:53,199
+Need to stop? Hit Cancel export.
+
+13
+00:00:53,783 --> 00:00:59,009
+Something got skipped? Check the product name and the reason underneath
+
+14
+00:00:59,009 --> 00:01:02,689
+An order still marked To Receive won’t be included
+
+15
+00:01:02,689 --> 00:01:05,265
+Want a fresh scan? Click Scan again
+
+16
+00:01:05,265 --> 00:01:08,135
+Load more orders first to include more!
+
+17
+00:01:08,700 --> 00:01:14,041
+When your file is ready, choose a folder, give it a name, and click Save
+
+18
+00:01:14,041 --> 00:01:15,228
+Nice and simple!
+
+19
+00:01:15,783 --> 00:01:18,880
+Now open the CSV in your spreadsheet app
+
+20
+00:01:18,880 --> 00:01:21,048
+Each product has its own row
+
+21
+00:01:21,048 --> 00:01:28,479
+Seeing hash marks? Widen the column! Some fields may stay blank if the details aren’t available.
+
+22
+00:01:29,033 --> 00:01:34,333
+And you’re done! Load your orders, scan with Trako, and save your CSV
+
+23
+00:01:34,333 --> 00:01:39,632
+Your order data stays in your browser and isn’t sent to Trako servers
+
+24
+00:01:39,632 --> 00:01:40,937
+Happy organizing!
+

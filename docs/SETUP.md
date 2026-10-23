@@ -1,6 +1,6 @@
 # Publish this privacy policy on GitHub Pages
 
-1. Replace `[YOUR CONTACT EMAIL]` in `docs/index.html` with your support email.
+1. Confirm the support email in `docs/index.html` is correct: `dondonbautista1223@gmail.com`.
 2. Commit and push `docs/` to the `main` branch of `Yquannn/Trako-chrome-extension`.
 3. Open the repository's **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**.

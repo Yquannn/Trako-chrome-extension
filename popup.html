@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trako Order Exporter</title>
+  <title>Trako – Order Exporter</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <main>
-    <div class="brand"><img class="mark" src="assets/mascot-head.svg" alt="Trako mascot"><div><h1>Trako Order Exporter</h1><p>Local order history export</p></div></div>
+    <div class="brand"><img class="mark" src="assets/mascot-head.svg" alt="Trako mascot"><div><h1>Trako – Order Exporter</h1><p>Local order history export</p></div></div>
     <div class="page-info"><div><span>Platform</span><strong id="platform">Checking active tab…</strong></div><div><span>Page</span><strong id="pageStatus">Ready to scan</strong></div></div>
-    <p class="hint">Trako appears automatically on supported order history pages. It exports only the orders already loaded on the page. Load more orders on Shopee, then export again to include them.</p>
-    <div id="summary" class="summary" aria-live="polite"><div><span>Orders found</span><b id="found">—</b></div><div><span>Orders extracted</span><b id="extracted">—</b></div><div><span>Orders skipped</span><b id="skipped">—</b></div><div><span>With delivery status</span><b id="withStatus">—</b></div><div><span>With exact delivery date</span><b id="withDate">—</b></div></div>
+    <p class="hint">Works with Shopee Philippines and Lazada Philippines. Open My Orders, load the orders you want, then export completed purchases from the Trako panel. Pause, continue, or cancel on the shopping page.</p>
     <p id="status" role="status" aria-live="polite">Ready</p>
     <button id="export">Export orders to CSV</button>
     <p class="privacy">Order data stays in this browser. Trako does not collect passwords, cookies, or send order data to a server.</p>
+    <nav class="links" aria-label="Help"><a href="https://yquannn.github.io/Trako-chrome-extension/" target="_blank" rel="noopener noreferrer">Privacy policy</a><a href="mailto:dondonbautista1223@gmail.com">Support</a><span>Version 0.2.0</span></nav>
   </main>
   <script src="export-core.js"></script>
   <script src="popup.js"></script>

@@ -1,39 +1,71 @@
 {
   "manifest_version": 3,
-  "name": "Trako Order Exporter",
-  "version": "0.1.0",
-  "description": "Export order details visible on supported shopping sites to CSV.",
+  "name": "Trako – Order Exporter",
+  "version": "0.2.0",
+  "description": "Export completed Shopee Philippines and Lazada Philippines orders to CSV. Processed locally in your browser.",
   "action": {
-    "default_title": "Trako Order Exporter",
-    "default_popup": "popup.html"
+    "default_title": "Trako – Order Exporter",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
   },
-  "permissions": ["downloads"],
-  "background": { "service_worker": "background.js" },
+  "permissions": [
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "web_accessible_resources": [
     {
-      "resources": ["assets/mascot-head.svg"],
-      "matches": ["https://shopee.ph/*", "https://www.shopee.ph/*", "https://shop.tiktok.com/*", "https://lazada.com.ph/*", "https://www.lazada.com.ph/*", "https://shein.com/*", "https://*.shein.com/*", "https://temu.com/*", "https://*.temu.com/*", "https://pinduoduo.com/*", "https://*.pinduoduo.com/*", "https://yangkeduo.com/*", "https://*.yangkeduo.com/*"]
+      "resources": [
+        "assets/mascot-head.svg"
+      ],
+      "matches": [
+        "https://shopee.ph/*",
+        "https://www.shopee.ph/*",
+        "https://lazada.com.ph/*",
+        "https://www.lazada.com.ph/*",
+        "https://my.lazada.com.ph/*"
+      ]
     }
   ],
   "content_scripts": [
     {
       "matches": [
+        "https://my.lazada.com.ph/*"
+      ],
+      "js": [
+        "lazada-navigation.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
         "https://shopee.ph/*",
         "https://www.shopee.ph/*",
-        "https://shop.tiktok.com/*",
         "https://lazada.com.ph/*",
         "https://www.lazada.com.ph/*",
-        "https://shein.com/*",
-        "https://*.shein.com/*",
-        "https://temu.com/*",
-        "https://*.temu.com/*",
-        "https://pinduoduo.com/*",
-        "https://*.pinduoduo.com/*",
-        "https://yangkeduo.com/*",
-        "https://*.yangkeduo.com/*"
+        "https://my.lazada.com.ph/*"
       ],
-      "js": ["export-core.js", "adapters.js", "content.js"],
+      "js": [
+        "export-core.js",
+        "lazada-adapter.js",
+        "adapters.js",
+        "content.js"
+      ],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "minimum_chrome_version": "111"
 }

@@ -1,10 +1,10 @@
-// Platform recognition is separate from extraction. Only Shopee has a focused
-// order-list adapter; other recognized sites retain conservative DOM heuristics.
+// Platform recognition is separate from extraction. Focused order-list adapters
+// are available for Shopee and Lazada; other sites are recognized but unverified.
 (() => {
   const rules = [
     { name: "Shopee Philippines", hosts: [/^(?:www\.)?shopee\.ph$/i], words: /my purchases?|purchase history|my orders|order details|track order/i },
     { name: "TikTok Shop", hosts: [/(^|\.)tiktok\.com$/i], words: /your orders|my orders|order history/i },
-    { name: "Lazada Philippines", hosts: [/^(?:www\.)?lazada\.com\.ph$/i], words: /my orders|order history/i },
+    { name: "Lazada Philippines", hosts: [/^(?:(?:www|my)\.)?lazada\.com\.ph$/i], words: /my orders|order history/i },
     { name: "SHEIN", hosts: [/(^|\.)shein\.[a-z.]+$/i], words: /my orders|order history/i },
     { name: "Temu", hosts: [/(^|\.)temu\.com$/i], words: /your orders|my orders|order history/i },
     { name: "Pinduoduo (拼多多)", hosts: [/(^|\.)(pinduoduo|yangkeduo)\.com$/i], words: /我的订单|全部订单|订单/i }
@@ -22,15 +22,28 @@
 
   window.TrakoAdapters = {
     platform: rule?.name || "",
+    verified: ["Shopee Philippines", "Lazada Philippines"].includes(rule?.name),
+    orderHistoryUrl: ({
+      "Shopee Philippines": "https://shopee.ph/user/purchase/",
+      "Lazada Philippines": "https://my.lazada.com.ph/customer/order/index/",
+      "SHEIN": `${location.origin}/user/orders/list`
+    })[rule?.name] || "",
     isOrderPage() {
       if (!rule) return false;
+      if (rule.name === "Lazada Philippines") return /\/customer\/order(?:\/|$)/i.test(location.pathname);
+      if (rule.name === "SHEIN") return /^\/user\/orders(?:\/|$)/i.test(location.pathname);
+      if (rule.name === "Shopee Philippines") return /\/user\/purchase(?:\/|$)/i.test(location.pathname);
       const pageText = `${location.pathname} ${document.title} ${(document.body?.innerText || "").slice(0, 8000)}`;
       return (rule.name === "Shopee Philippines" && /\/user\/purchase(?:\/|$)/i.test(location.pathname)) || rule.words.test(pageText);
     },
     extract() {
       if (!rule || !document.body) return { rows: [], scannedOrders: 0, skippedOrders: 0, skippedProducts: [] };
       if (rule.name === "Shopee Philippines") return extractShopee();
-      return extractGeneric(rule.name);
+      if (rule.name === "Lazada Philippines") return window.TrakoLazada.extract();
+      if (rule.name === "SHEIN" && /It is empty here\s*:-\(/i.test(document.body.innerText)) {
+        throw new Error("SHEIN is showing an empty order history. Recommended products are not purchases and cannot be exported.");
+      }
+      throw new Error(`${rule.name} is recognized, but its order extraction has not been verified yet. No CSV was generated.`);
     },
     getOrderLinks() {
       if (rule?.name !== "Shopee Philippines") return [];
@@ -224,36 +237,4 @@
     return (hash >>> 0).toString(36);
   }
 
-  function extractGeneric(platform) {
-    const idPattern = /(?:order\s*(?:no\.?|number|id)|订单编号|订单号)\s*[:：#]?\s*([A-Z0-9-]{6,})/i;
-    const candidates = [...document.querySelectorAll("article, [role=article], li, section, div")]
-      .filter(el => isVisible(el) && el.children.length && idPattern.test(textOf(el)) && textOf(el).length < 12000)
-      .sort((a, b) => textOf(a).length - textOf(b).length);
-    const cards = candidates.filter(el => {
-      let parent = el.parentElement;
-      while (parent && parent !== document.body) {
-        if (textOf(parent).length > 12000) break;
-        if (idPattern.test(textOf(parent))) return false;
-        parent = parent.parentElement;
-      }
-      return true;
-    });
-    const rows = [];
-    let skippedOrders = 0;
-    cards.forEach((card, index) => {
-      const body = textOf(card);
-      const orderId = body.match(idPattern)?.[1] || "";
-      const orderKey = orderId || `generic-card-${index}-${fingerprint(body)}`;
-      const productNames = [...card.querySelectorAll("[title], [aria-label], img[alt]")]
-        .filter(isVisible).map(el => el.getAttribute("title") || el.getAttribute("aria-label") || el.getAttribute("alt") || "")
-        .map(normalize).filter(name => name.length > 2 && !/^(logo|icon|avatar|banner)$/i.test(name));
-      if (!productNames.length) { skippedOrders++; return; }
-      const total = body.match(/(?:order\s*total|total|订单总额|实付款|合计)\s*[:：]?\s*((?:₱|PHP|US\$|\$|€|£|¥|￥|CNY|RMB)\s*[\d,]+(?:\.\d{1,2})?)/i)?.[1] || "";
-      for (const productName of [...new Set(productNames)]) rows.push({ platform, orderId, _orderKey: orderKey,
-        sellerName: "", productName, productVariation: "", quantity: "", unitPrice: "", orderTotal: total,
-        orderStatus: "", deliveryStatus: "", purchaseDate: "", deliveryDate: "", trackingNumber: "",
-        currency: (total.match(/₱|PHP|US\$|\$|€|£|¥|￥|CNY|RMB/i) || [""])[0], imageUrl: "" });
-    });
-    return { rows: window.TrakoCore.dedupeRows(rows), scannedOrders: cards.length, skippedOrders, excludedOrders: 0, skippedProducts: [] };
-  }
 })();

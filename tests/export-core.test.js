@@ -48,3 +48,13 @@ test("summary counts product rows and order level delivery details", () => {
     ordersWithDeliveryStatus: 1, ordersWithDeliveryDate: 1
   });
 });
+
+test("all platform CSVs keep the Shopee column names and order, even with missing optional fields", () => {
+  const header = '"platform","order_id","seller_name","product_name","variation","quantity","product_price","order_total","order_status","delivery_status","purchase_date","delivery_date","tracking_number","currency","image_url"';
+  for (const platform of ['Shopee Philippines', 'Lazada Philippines', 'SHEIN', 'TikTok Shop', 'Temu', 'Pinduoduo (拼多多)']) {
+    const csv = core.toCsv([{ platform }]);
+    const [actualHeader, row] = csv.split('\r\n');
+    assert.equal(actualHeader, header, platform);
+    assert.equal(row, `"${platform}","","","","","","","","","","","","","",""`);
+  }
+});

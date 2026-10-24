@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Trako – Order Exporter",
-  "version": "0.2.0",
-  "description": "Export completed Shopee Philippines and Lazada Philippines orders to CSV. Processed locally in your browser.",
+  "version": "0.2.2",
+  "description": "Export online shopping orders to CSV locally. Supports Shopee PH and Lazada PH; SHEIN and other stores are planned.",
   "action": {
     "default_title": "Trako – Order Exporter",
     "default_popup": "popup.html",

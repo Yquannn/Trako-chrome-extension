@@ -2,8 +2,8 @@
 
 ## Package
 
-- Version: **0.2.0** (previous workspace version: 0.1.0).
-- File: `release/trako-order-exporter-0.2.0.zip`.
+- Version: **0.2.2** (previous package: 0.2.1).
+- File: `release/trako-order-exporter-0.2.2.zip`.
 - Public release sites: **Shopee Philippines and Lazada Philippines**.
 - Minimum Chrome version: 111.
 - Build again with `python3 scripts/package-release.py`.
@@ -17,7 +17,7 @@ Trako – Order Exporter
 
 ### Short description (also in manifest)
 
-Export completed Shopee Philippines and Lazada Philippines orders to CSV. Processed locally in your browser.
+Export online shopping orders to CSV locally. Supports Shopee PH and Lazada PH; SHEIN and other stores are planned.
 
 ### Suggested category and language
 
@@ -27,7 +27,19 @@ Productivity / English
 
 Turn your completed shopping orders into a CSV file with Trako – Order Exporter.
 
-Trako works with Shopee Philippines and Lazada Philippines. Its mascot panel appears automatically on these shopping websites, so you can open My Orders and start an export from the page.
+Trako helps you keep your online shopping purchases in one consistent CSV format. Its mascot panel appears automatically on supported shopping websites, so you can open My Orders and start an export from the page.
+
+Supported now:
+• Shopee Philippines
+• Lazada Philippines
+
+Planned platforms — not available in this version:
+• SHEIN
+• TikTok Shop
+• Temu
+• Pinduoduo (拼多多)
+
+Exports for planned platforms will be added after their actual order pages have been implemented and validated. This version exports orders only from Shopee Philippines and Lazada Philippines.
 
 How to use:
 1. Sign in normally on Shopee Philippines or Lazada Philippines.
@@ -91,8 +103,14 @@ Trako reads shopping-page content, including purchase and order information and 
 
 Use these actual practices when completing the dashboard’s privacy fields. Do not describe the extension as never accessing user data: it accesses purchase information locally to provide its functionality.
 
-## What changed in 0.2.0
+## What changed in 0.2.2
 
+- Updated the short and detailed descriptions to explain the supported platforms and distinguish planned integrations.
+- No changes to extraction behavior or website permissions.
+
+## What changed in 0.2.1
+
+- Rebuilt the upload archive with portable ZIP metadata and manifest.json as the first root entry.
 - Renamed to Trako – Order Exporter, with bundled mascot PNG icons.
 - Added verified Lazada order-list extraction and detail-page dates in the shared CSV format.
 - Added Pause / Continue, and improved cancellation and fresh retry handling.
@@ -104,7 +122,7 @@ Use these actual practices when completing the dashboard’s privacy fields. Do 
 ## Upload instructions
 
 1. Open your existing Trako item in the Chrome Web Store Developer Dashboard. Keep the existing item to retain its extension ID.
-2. Under Package, upload `release/trako-order-exporter-0.2.0.zip`. If the dashboard already has a version higher than 0.2.0, increase the manifest version and rebuild first.
+2. Under Package, upload `release/trako-order-exporter-0.2.2.zip`. If the dashboard already has a version higher than 0.2.2, increase the manifest version and rebuild first.
 3. Update the listing name, description, privacy practices, contact details, and privacy-policy URL using the copy above.
 4. Add accurate screenshots of the release. Previous media is under `promo/`; it shows the earlier name/UI and should be refreshed before reuse. The mascot store icon is `assets/icon-128.png`.
 5. Choose **Public** in Distribution when ready for a public release, then submit the item for review.

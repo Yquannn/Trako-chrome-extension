@@ -60,8 +60,14 @@ Missing optional values are empty cells. A platform's own status label is preser
 
 ## Chrome Web Store release
 
-Current package: **0.2.0**, named **Trako – Order Exporter**.
+Current package: **0.2.2**, named **Trako – Order Exporter**.
 
-Run `python3 scripts/package-release.py` to generate `release/trako-order-exporter-0.2.0.zip`. The ZIP includes only the extension runtime and mascot assets, with `manifest.json` at the root. Promo videos, screenshots, docs, tests, Git history, and local exports are excluded.
+Run `python3 scripts/package-release.py` to generate `release/trako-order-exporter-0.2.2.zip`. The ZIP includes only the extension runtime and mascot assets, with `manifest.json` at the root. Promo videos, screenshots, docs, tests, Git history, and local exports are excluded.
 
 See `CHROMEWEBSTORE.md` for listing copy, release notes, privacy/permission details, and upload instructions. Upload the ZIP to the existing Chrome Web Store item to keep its extension ID. Local preparation does not publish the update or deploy the privacy-policy site.
+
+## Platform availability
+
+**Supported now:** Shopee Philippines and Lazada Philippines.
+
+**Planned, not available in this version:** SHEIN, TikTok Shop, Temu, and Pinduoduo (拼多多). Each requires a validated order-page adapter before export support can be released.
